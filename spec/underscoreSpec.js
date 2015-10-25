@@ -150,6 +150,7 @@ describe("pluck", function() {
 });
 
 describe("invoke", function() {
+
   it("should sort the first array", function() {
     var lists = [[5, 1, 7], [3, 2, 1]];
     var result = _.invoke(lists, 'sort');
