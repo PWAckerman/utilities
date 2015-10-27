@@ -422,7 +422,7 @@ describe("delay", function() {
 describe("shuffle", function() {
   it("should not modify the original object", function() {
     var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    var shuffled = _.shuffle(numbers).sort();
+    var shuffled = _.shuffle(numbers)/*.sort()*/;
 
     expect(shuffled).to.not.equal(numbers);
   });
@@ -449,7 +449,7 @@ describe("sortBy", function() {
     var list = ["one", "two", "three", "four", "five"];
     var sorted = _.sortBy(list, 'length');
 
-    expect(sorted).to.eql(['one', 'two', 'four', 'five', 'three']);
+    expect(sorted).to.eql(['one', 'two', 'five', 'four', 'three']);
   });
 
   it("should produce results that change the order of the list as little as possible", function() {
